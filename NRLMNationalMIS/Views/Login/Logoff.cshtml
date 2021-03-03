@@ -1,0 +1,35 @@
+﻿@model NRLMNationalMIS.Model.ValidateLogin
+@{
+    ViewBag.Title = "Sign Out";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<div class="row">
+    <div class="login-reg-panel">
+        <div class="register-info-box">
+            <h1>NRLM National MIS</h1>
+            <p class="text-white">WELCOME YOU</p>
+        </div>
+        <div class="white-panel">
+            <div class="login-show">
+                <h2>Sign Out</h2>
+                @using (Html.BeginForm())
+            {
+                    <form>
+                        <div class="form-group">
+                            <div style="float: left;width: 100%;height: auto; margin-top: 15px;">
+                                <div style="float: left;width: 100px;height: auto;">
+                                    <img src="~/Images/logout_icon.png" style="height:80px">
+                                </div>
+                                <div style="float: left;width: calc(100% - 100px);height: auto;margin-top: 15px;color: #fff;">
+                                    <h4>See you again!</h4>
+                                    <p>You are now successfully signed out.</p>
+                                    <button type="button" class="btn btn-primary btn-rp" onclick="location.href='/login'">Login Again</button>
+                                </div>
+                            </div>
+                        </div> <!-- form-group// -->
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</div>

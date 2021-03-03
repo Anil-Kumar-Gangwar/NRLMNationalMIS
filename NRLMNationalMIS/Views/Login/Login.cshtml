@@ -1,0 +1,45 @@
+﻿@model NRLMNationalMIS.Model.ValidateLogin
+@{
+    ViewBag.Title = "Sign in";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<div class="row">
+    <div class="login-reg-panel">
+        <div class="register-info-box">
+            <h1>NRLM National MIS</h1>
+            <p class="text-white">WELCOME YOU</p>
+        </div>
+        <div class="white-panel">
+            <div class="login-show">
+                <h2>LOGIN</h2>
+                @using (Html.BeginForm())
+            {
+                    <form>
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.userName, null, new { @class = "", placeholder = "Login ID", maxlength = 20, autofocus = "autofocus"})
+                            @Html.ValidationMessageFor(m => m.userName, "", new { @class = "text-danger" })
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+
+                            @Html.PasswordFor(m => m.password, new { @class = "", placeholder = "Password", maxlength = 50, autocomplete = "off" })
+                            @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <p class="text-danger">@MvcHtmlString.Create(@ViewBag.LoginMessage)</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="row pt-4">
+                                <div class="col-md-6 ">
+                                    <span class="align-middle font-weight-bolder"><a href="#">Forgot password?</a></span>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>
+                                </div>
+                            </div>
+                        </div> <!-- form-group// -->
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</div>

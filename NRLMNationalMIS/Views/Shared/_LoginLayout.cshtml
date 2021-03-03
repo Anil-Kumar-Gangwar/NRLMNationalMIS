@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <link rel="icon" href="~/favicon1.ico" type="image/x-icon" sizes="16x16">
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () { setHeight(); });
+        function setHeight() {
+            var height = $(window).height();
+            var divScroll = null;
+            if ($("#divScroll").length != 0)
+                divScroll = $("#divScroll");
+            else divScroll = $("#divContent");
+            var marginTop = divScroll.offset().top;
+            marginTop = marginTop + 26;
+            height = height - marginTop;
+            divScroll.height(height);
+        }
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-12 col-sm-3 col-md-3 p-0 a1">
+            <div id="imageDiv" style="background-color:#98144D; padding-left:90px;">
+                <a href="#">
+                    <img src="~/Content/assets/images/headerlogo_n.png" class="img-responsive" />
+                </a>
+            </div> 
+        </div>
+        <div class="col-12 col-sm-9 col-md-9 p-0">
+            <div id="headerMenu" style="background-color: #98144D;float: right;width: 100%;height: 32.2px;"></div>
+        </div>
+    </div>
+    
+            @RenderBody()
+</body>
+</html>
+<style>
+
+
+#imageDiv img{
+  margin-top:-10px;
+}
+.a1 {
+     z-index: 3;
+}
+</style>
