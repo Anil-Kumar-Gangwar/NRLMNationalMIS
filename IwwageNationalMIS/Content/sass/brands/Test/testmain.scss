@@ -1,0 +1,39 @@
+﻿/*  Variables (overrides main variables set in: utilities\_variables.scss ) */
+
+// brand color pallette
+$brand-primary: #002d7a;
+$brand-primary-dark: #002d7a;
+$brand-primary-light: #325694;
+$brand-primary-ultralight: #31afff;
+$brand-secondary: #fff100;
+$brand-navbar-item-colour: #fff;
+
+// brand logo and header styles
+$brand-logo: url('/Images/logo-lidl.png');
+$brand-header-background: $brand-primary;
+$brand-dashboard-welcome-background-image: url('/Images/welcome-lidl-bkg.jpg');
+
+//this variable is for the nav bar header when using the new style and clientStyle.UsesOldLogo = FALSE
+$brand-logo-new: url('/Images/Banner-logo-lidl.png' );
+
+//this variable is for the login page when using the new style and clientStyle.UsesOldLogo = FALSE
+$brand-logo-login: url('/Images/logo-lidl-new-style.png');
+
+//this is for sizing the logo when the client style use old logo is FALSE
+$brand-logo-height-login-desktop-new: 350px;
+
+
+// brand logo login page styles
+$brand-logo-width-login-mobile: 60px;
+$brand-logo-height-login-desktop: 100px;
+$brand-logo-vertical-space-login-mobile: 5px;
+
+// brand app header/navbar logo styles
+$brand-logo-width-navbar: 100px;
+$brand-logo-height-navbar: 35px;
+$brand-logo-vertical-space-navbar: 5px;
+
+$brand-product-title: inline-block;
+
+// import main / default styles
+@import '../../main.scss';

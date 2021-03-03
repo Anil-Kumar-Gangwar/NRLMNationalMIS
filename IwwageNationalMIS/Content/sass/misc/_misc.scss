@@ -1,0 +1,399 @@
+﻿.bold {
+    font-family: $brand-font-primary-bold;
+}
+
+.stepper-header {
+    display: flex;
+    align-items: center;
+}
+
+.step-trigger {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 2px 10px 2px;
+    /*font-size: .8rem;
+    font-weight: 600;*/
+    /*line-height: 1.5;*/
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: none;
+    border-radius: .25rem;
+
+    &:hover {
+        text-decoration: none !important;
+        background-color: rgba(0, 0, 0, .06);
+        color: $brand-primary !important;
+
+        & .stepper-circle {
+            background-color: $brand-primary-dark;
+        }
+
+        & .stepper-label {
+            color: $brand-primary-dark;
+        }
+    }
+}
+
+.stepper-circle {
+    display: inline-flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.3em;
+    border: 2px solid #c3c3c3;
+    border-radius: $brand-space-large;
+    height: 34px;
+    width: 34px;
+    //
+    padding: .5em 0;
+    margin: .25rem;
+    line-height: 1em;
+    //
+    color: #fff;
+    background-color: #6c757d;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.13);
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        background-color: $brand-primary;
+    }
+}
+
+.stepper-label {
+    font-size: $brand-type-large;
+    display: inline-block;
+    margin: .25rem;
+    color: #6c757d;
+
+    &:hover > span .stepper-circle {
+        color: $brand-primary;
+    }
+}
+
+.stepper-line {
+    flex: 1 0 22px;
+    min-width: 1px;
+    min-height: 1px;
+    margin: auto;
+    background-color: rgba(0,0,0,.12);
+}
+
+.active .stepper-circle {
+    background-color: $brand-primary;
+}
+
+.active .stepper-label {
+    color: $brand-primary;
+}
+
+.mask {
+    background: white;
+    position: absolute;
+    min-height: 47%;
+    width: $brand-space-large;
+
+    &-top-right,
+    &-bottom-right {
+        &:before,
+        &:after {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            position: absolute;
+        }
+    }
+
+    &-top-right {
+        @extend .mask;
+        top: 0;
+        right: 0;
+
+        &:after {
+            content: "";
+            bottom: -50px;
+            border-width: 0 50px 50px 0;
+            border-color: transparent #ffffff transparent transparent;
+        }
+    }
+
+    &-bottom-right {
+        @extend .mask;
+        right: 0;
+        bottom: 0;
+
+        &:before {
+            content: "";
+            top: -50px;
+            border-width: 0 0 50px 50px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+    }
+}
+
+.list-group {
+    box-shadow: none;
+
+    &-item-text {
+        font-size: $brand-type-small;
+    }
+
+    &-item-heading {
+        font-size: $brand-type-base;
+        font-family: $brand-font-primary-bold;
+    }
+}
+
+@media (max-width:767px) {
+
+    .list-group {
+        box-shadow: none;
+        margin-bottom: 100px;
+
+        &-item-text {
+            font-size: $brand-type-small;
+        }
+
+        &-item-heading {
+            font-size: $brand-type-base;
+            font-family: $brand-font-primary-bold;
+        }
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    &.list-group-item-heading {
+        text-transform: none;
+        font-size: $brand-type-large;
+    }
+}
+
+.popup {
+    box-shadow: 0 0px 60px rgba(0, 0, 0, 0.29);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: $brand-border-radius;
+    display: none;
+    position: relative;
+    background: white;
+    top: $brand-space-medium;
+    z-index: 3;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: 46%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 $brand-space-small $brand-space-medium $brand-space-small;
+        border-color: transparent transparent #fff transparent;
+    }
+}
+
+.aspNetDisabled {
+    opacity: 0.6 !important;
+    pointer-events: none;
+}
+
+.bootbox .modal-header {
+    flex-direction: row-reverse;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    padding: 8px !important;
+}
+
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width: inherit;
+    max-width: inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+    height: inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.dropdown-menu {
+    & .dropdown-item {
+        color: $brand-primary;
+    }
+}
+
+.dropdown-menu {
+    & a:hover, & a:focus,
+    & .active > a, & .active > a:hover,
+    & .active > a:focus, & > li > a:hover, & > li > a:focus {
+        background-image: none !important;
+        background-color: $brand-primary !important;
+        color: #fff !important;
+    }
+}
+
+.divider-vertical {
+    border-width: 0;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: $brand-grey;
+}
+
+.divider-horizontol {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: $brand-grey;
+}
+
+.ranges li.active {
+    background-color: $brand-primary !important;
+    border: 1px solid $brand-primary;
+    color: #fff;
+}
+
+.ranges li:hover {
+    background-color: $brand-primary !important;
+    border: 1px solid $brand-primary;
+    color: #fff;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: $brand-primary !important;
+}
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td span.active {
+    background-color: $brand-primary !important;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+    padding: $brand-space-small $brand-space-medium;
+}
+
+b {
+    font-weight: normal;
+    font-family: $brand-font-primary-bold;
+}
+
+
+
+.container {
+    max-width: 100%;
+}
+
+.lead {
+    margin: 0;
+    font-size: $brand-type-large;
+    font-family: $brand-font-primary-bold;
+    color: $brand-primary;
+}
+
+.well {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+// helper classes
+.inline-b {
+    display: inline-block;
+}
+
+.user-name {
+    text-transform: uppercase;
+    font-family: $brand-font-primary-bold;
+}
+
+.v-align {
+    vertical-align: middle;
+}
+
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.shadowed {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+    border-radius: 4px;
+}
+
+.underlined {
+    margin: $brand-space-base 0;
+    padding-bottom: $brand-space-base;
+    border-bottom: 1px solid #ececec;
+    width: 15%;
+    white-space: nowrap;
+}
+
+.hide {
+    display: none;
+}
+
+.filter-control-space {
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+/*Added by Pankaj Sharma to fix Menu*/
+@media (max-width:1100px) {
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .navbar-nav .open .dropdown-menu > li > a {
+        color: #999999;
+    }
+
+    .navbar-collapse {
+        padding: 0px;
+    }
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    /*color: $brand-primary;*/
+    background-color: $brand-primary !important;
+    width: 85px;
+    text-align: center;
+}
+
+.menu .accordion-heading {
+    position: relative;
+    padding: 10px 10px;
+}
+
+.menu .collapse.in {
+    overflow: visible;
+}
+
+.menu .area {
+    border-left: 4px solid $brand-primary !important;
+}
+
+.menu .child {
+    border-left: 4px solid #57c42c;
+}

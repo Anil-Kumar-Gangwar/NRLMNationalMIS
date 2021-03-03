@@ -1,0 +1,27 @@
+.panel {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.panel-primary {
+    border: 0;
+    padding: $brand-space-medium;
+
+    & > .panel-heading {
+        background-image: none;
+        background-color: transparent;
+        color: $brand-grey-dark;
+        border: 0;
+        padding: 0;
+    }
+}
+
+.panel-title {
+    text-transform: uppercase;
+    margin: 0 0 $brand-space-medium;
+    width: 80%;
+}
+
+.panel-body {
+    padding: 0;
+}

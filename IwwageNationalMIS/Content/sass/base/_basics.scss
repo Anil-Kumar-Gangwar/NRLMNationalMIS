@@ -1,0 +1,58 @@
+﻿
+body, h1, h2, h3, h4, h5, h6, p {
+    color: $brand-grey-dark;
+    font-family: $brand-font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: $brand-space-medium 0;
+}
+
+h1 {
+    font-size: $brand-type-max;
+}
+
+h2 {
+    font-size: $brand-type-large;
+}
+
+p {
+    font-size: $brand-type-xlarge;
+    padding: 0;
+    margin: $brand-space-base 0;
+}
+
+a {
+    color: $brand-primary;
+    &:hover,
+    &:focus {
+        color: $brand-primary-dark;
+    }
+}
+
+img {
+    border-radius: $brand-border-radius;
+}
+
+.main-content {
+    padding: 0;
+    height: 100%;
+}
+
+.main-content,
+.sidebar {
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+    }
+}
+
+.main {
+    background: white;
+}
+
+.main,
+.sidebar {
+    border-top: 1px solid $brand-grey;
+}

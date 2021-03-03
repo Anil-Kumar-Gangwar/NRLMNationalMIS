@@ -1,0 +1,24 @@
+﻿.table {
+    font-size: $brand-type-base;
+
+    /*tbody > tr {
+        & > td {
+            border-top: 0;
+        }
+        & > th {
+            border-bottom-width: 1px;
+        }
+        &:nth-child(even) {
+            background: #f9f9f9;
+        }
+    }*/
+    .fa,
+    .glyphicon {
+        font-size: $brand-type-large;
+        color: $brand-primary;
+    }
+}
+th {
+    font-weight: normal;
+    font-family: $brand-font-primary-bold;
+}

@@ -1,0 +1,240 @@
+.form-inline .form-group {
+    display: block;
+}
+
+.popup {
+    .form-group {
+        padding: 0 $brand-space-small;
+    }
+
+    label {
+        font-size: $brand-type-xsmall;
+        text-transform: none;
+    }
+
+    .radio,
+    .checkbox {
+        padding-left: 0;
+    }
+}
+
+label {
+    /*display: block;*/
+    font-size: $brand-type-small;
+    margin: $brand-space-small 0 $brand-space-xsmall;
+    font-family: $brand-font-primary-bold;
+}
+
+.label-inline {
+    display: inline-block;
+}
+
+input[type="text"], textarea {
+    padding: $brand-space-small $brand-space-medium;
+    max-width: 600px;
+    width: 100%;
+}
+
+input, textarea {
+    border: 1px solid $brand-grey-light;
+    background: white;
+    color: $brand-grey-dark;
+    font-size: $brand-type-xlarge;
+    /*margin: $brand-space-xsmall 0;*/
+    border-radius: $brand-border-radius;
+
+    &:focus {
+        border: 1px solid $brand-primary;
+    }
+}
+
+.row {
+    margin: 0;
+}
+
+.card-body, .card-header {
+    padding: 5px !important;
+}
+.card{
+    padding:2px!important;
+}
+.control-label {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+.form-control {
+    font-size: 14px !important;
+}
+
+textarea.form-control {
+    font-size: $brand-type-base;
+}
+
+.input-xs {
+    max-width: 60px;
+}
+
+.input-sm {
+    max-width: 110px;
+}
+
+.radio label {
+    margin: 0 $brand-space-base 0 0;
+}
+// animated form inputs
+.checkbox label:after,
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+}
+
+.checkbox .cr .cr-icon {
+    top: 7px;
+    left: 2px;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+    top: 6px;
+    left: 2px;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+
+// disabled form elements
+.disabled {
+    *,
+    input,
+    label,
+    .cr {
+        cursor: not-allowed;
+    }
+}
+
+.circle {
+    border: 0px solid red;
+    background: $brand-primary;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    padding: 2px 5px;
+    position: relative;
+    top: -15px;
+    left: -11px;
+}
+
+.sort-icon {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: $brand-primary;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.ui-state-active {
+    background-color: $brand-primary !important;
+}
+
+.dialog-title {
+    font-size: large;
+    color: $brand-primary !important;
+}
+
+.tooltip-inner {
+    border: 1px solid black;
+    padding: 1%;
+    color: black;
+    background-color: white;
+}
+
+input[type=radio].with-font ~ label:before,
+input[type=checkbox].with-font ~ label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f1db";
+    letter-spacing: $brand-space-small;
+    font-size: $brand-type-base;
+    color: $brand-primary !important;
+    width: 1.4em;
+}
+
+input[type=radio].with-font:checked ~ label:before,
+input[type=checkbox].with-font:checked ~ label:before {
+    content: "\f00c";
+    font-size: $brand-type-base;
+    color: $brand-primary !important;
+    letter-spacing: $brand-space-xsmall;
+}
+
+input[type=checkbox].with-font ~ label:before {
+    content: "\f096";
+}
+
+input[type=checkbox].with-font:checked ~ label:before {
+    content: "\f046";
+    color: $brand-primary !important;
+}
+
+input[type=radio].with-font:focus ~ label:before,
+input[type=checkbox].with-font:focus ~ label:before,
+input[type=radio].with-font:focus ~ label,
+input[type=checkbox].with-font:focus ~ label {
+    color: $brand-primary !important;
+}

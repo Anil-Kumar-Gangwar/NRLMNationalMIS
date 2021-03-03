@@ -1,0 +1,161 @@
+﻿app-login {
+    input[type="text"], textarea, input#password {
+        width: 100%;
+        min-width: initial;
+        max-width: 265px;
+        @media screen and (min-width: 380px) {
+            max-width: 350px;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            max-width: 500px;
+        }
+    }
+
+    .login-side {
+        background: $brand-primary;
+
+        @media screen and (min-width: $screen-sm-min) {
+            padding-right: $brand-space-xlarge;
+            margin: 0;
+        }
+
+        .brand-container {
+            @media screen and (min-width: $screen-sm-min) {
+                margin: auto;
+                width: 80%;
+            }
+        }
+
+        h2 {
+            color: white;
+            font-weight: normal;
+            display: inline-block;
+            margin: 12px 0;
+            white-space: nowrap;
+            text-transform: none;
+
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: $brand-type-xxlarge;
+                float: none;
+                margin: 0;
+            }
+        }
+
+        .brand-logo {
+            min-height: 22px;
+            width: $brand-logo-width-login-mobile;
+            margin: $brand-logo-vertical-space-login-mobile $brand-space-medium;
+            float: left;
+
+            @media screen and (min-width: $screen-sm-min) {
+                width: auto;
+                height: $brand-logo-height-login-desktop;
+                margin: 0;
+                float: none;
+            }
+        }
+
+        .brand-logo-login {
+            min-height: 35px;
+            width: $brand-logo-width-login-mobile;
+            float: left;
+            @media screen and (min-width: $screen-sm-min) {
+                width: auto;
+                height: $brand-logo-height-login-desktop;
+                margin: 0;
+                float: none;
+            }
+        }
+
+        .divider-chevron {
+            top: 0.85em;
+            left: -2em;
+            height: 4em;
+            width: 4em;
+            margin: 0;
+
+            @media screen and (min-width: $screen-sm-min) {
+                display: none;
+            }
+        }
+    }
+
+    .login-main {
+        background: white;
+        height: 90%;
+        padding: $brand-space-base 0 0;
+
+        @media screen and (min-width: $screen-sm-min) {
+            padding: 0;
+        }
+
+        .inner {
+            padding: 0 $brand-space-base;
+
+            @media screen and (min-width: $screen-sm-min) {
+                padding: 0 $brand-space-xlarge;
+            }
+        }
+
+        h1 {
+            font-size: $brand-type-xxxlarge;
+            margin: $brand-space-small 0;
+            text-transform: none;
+
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: $brand-type-max;
+                white-space: nowrap;
+            }
+        }
+
+        p {
+            font-size: $brand-type-large;
+
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: $brand-type-xlarge;
+            }
+        }
+    }
+
+    .login-main,
+    .login-side {
+        @media screen and (min-width: $screen-sm-min) {
+            height: 100%;
+
+            .inner {
+                margin: 160px auto 0;
+                position: relative;
+            }
+        }
+    }
+
+    .login-help {
+        &-mobile {
+            display: block;
+            margin: $brand-space-base 0;
+        }
+
+        &-desktop {
+            display: none;
+        }
+
+        @media screen and (min-width: $screen-sm-min) {
+            bottom: auto;
+            margin-top: -100px;
+            right: $brand-space-xlarge;
+
+            &-mobile {
+                display: none;
+            }
+
+            &-desktop {
+                display: block;
+                position: absolute;
+            }
+        }
+
+        .help-txt {
+            padding: 8px 0;
+        }
+    }
+}

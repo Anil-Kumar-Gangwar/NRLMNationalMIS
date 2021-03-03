@@ -1,0 +1,43 @@
+﻿.pagination {
+    margin: $brand-space-medium 0;
+
+    & > li > a {
+        border-radius: $brand-button-radius;
+        height: $brand-space-med-large;
+        width: $brand-space-med-large;
+        padding: 6px $brand-space-small;
+        margin: 0 1px;
+        background: transparent;
+        border-color: transparent;
+    }
+    & > .disabled > a,
+    & > .disabled > a:hover {
+        background: transparent;
+        border-color: transparent;
+    }
+    & > li:first-child > a,
+    & > li:first-child > span,
+    & > li:last-child > a,
+    & > li:last-child > span {
+        border-radius: $brand-button-radius;
+    }
+    & > .active > a,
+    & > .active > span,
+    & > .active > a:hover,
+    & > .active > span:hover,
+    & > .active > a:focus,
+    & > .active > span:focus {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+        z-index: 0;
+    }
+    & > li:first-child,
+    & > li:last-child {
+        & > span,
+        & > a {
+            padding-top: 9px;
+        }
+    }
+}
+
+

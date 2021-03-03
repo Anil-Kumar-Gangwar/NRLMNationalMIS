@@ -1,0 +1,53 @@
+﻿@model IEnumerable<IwwageNationalMIS.Model.UserMenu>
+@{
+    Layout = null;
+}
+<nav class="navbar navbar-light navbar-expand-lg mainmenu">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            @{
+                if (Model != null)
+                {
+                    var header = Model.Where(x => x.parentMenuId == null).OrderBy(o=>o.sequenceNo);
+                    foreach (var hd in header)
+                    {                       
+                        var menuItem = Model.Where(x => x.parentMenuId == hd.menuId).OrderBy(o => o.sequenceNo);
+                        if (menuItem.Count() > 0)
+                        {                           
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@hd.menuName</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @foreach (var menu in menuItem)
+                                    {
+                                        <li><a href="@menu.url">@menu.menuName</a></li>
+                                    }                            
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="@if (hd.menuId == 1){<text>active</text>}"><a href="@hd.url">@hd.menuName</a></li>
+                        }
+                    }
+                }
+            }
+        </ul>
+    </div>
+</nav>
+<script>
+    (function ($) {
+        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            var $subMenu = $(this).next(".dropdown-menu");
+            $subMenu.toggleClass('show');
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+
+            return false;
+        });
+    })(jQuery)
+</script>

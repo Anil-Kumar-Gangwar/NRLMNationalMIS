@@ -1,0 +1,28 @@
+﻿.divider-chevron {
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	content: '';
+	display: inline-block;
+	height: 3.25em;
+    width: 3.25em;
+    margin: 0 $brand-space-medium 0 0;
+	position: relative;
+    top: 8px;
+	vertical-align: top;
+	transform: rotate(45deg);
+    border-color: white;
+    opacity: 0.5;
+}
+.divider-shadow {
+    background: url(/Images/curved-shadow.png) no-repeat;
+    background-size: contain;
+    padding: $brand-space-base;
+    margin: $brand-space-base 0;
+    opacity: 0.8;
+}
+.divider-thin {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-style: solid;
+    width: 100%;
+}

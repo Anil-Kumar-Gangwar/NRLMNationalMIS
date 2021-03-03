@@ -1,0 +1,104 @@
+﻿input[type="submit"],
+input[type="button"],
+button,
+.button {
+    color: white;
+    background: $brand-primary;
+    display: block;
+    /*font-size: $brand-type-small;*/
+    font-weight: normal;
+    text-transform: uppercase;
+    /*padding: $brand-space-medium $brand-space-xlarge;
+    margin: $brand-space-large $brand-space-small 0 0;*/
+    &:hover {
+        background: $brand-primary-dark;
+        color: white;
+    }
+}
+
+.btn {
+    &.focus,
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    &-default {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        color: $brand-primary;
+
+        &:hover,
+        &:focus {
+            background: transparent;
+            color: $brand-primary-dark;
+            opacity: .8;
+        }
+
+        .glyphicon {
+            font-size: $brand-type-xlarge;
+            display: inline-block;
+            vertical-align: sub;
+            margin: 0 $brand-space-xsmall;
+        }
+
+        .fa {
+            font-size: $brand-type-xlarge;
+            display: inline-block;
+            vertical-align: sub;
+        }
+    }
+
+    &-background:hover {
+        background-color: rgba(0, 0, 0, .06) !important;
+    }
+
+    &-round {
+        border-radius: $brand-button-radius;
+    }
+
+    &-outline {
+        border: 1px solid;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &-c {
+            background: transparent;
+            border-color: $brand-primary;
+            color: $brand-primary;
+
+            &:hover {
+                color: $brand-primary;
+                background: transparent;
+            }
+        }
+
+        &-w {
+            border-color: white;
+            color: white;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    &-add {
+        margin: 0;
+    }
+}
+
+.btn-primary {
+    color: white !important;
+    background: $brand-primary !important;
+    border-color: $brand-primary !important;
+
+    &:hover {
+        background: $brand-primary-dark !important;
+        color: white !important;
+    }
+}

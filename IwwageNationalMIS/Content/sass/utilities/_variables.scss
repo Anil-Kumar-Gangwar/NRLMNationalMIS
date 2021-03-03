@@ -1,0 +1,85 @@
+﻿/* Variables */
+
+// brand color pallette
+/*#18263c*/
+$brand-primary: #18263c !default;
+$brand-primary-dark:navy !default;/*#091831*/
+$brand-primary-light: #113063 !default;
+$brand-primary-ultralight: #a5c5e2 !default;
+$brand-secondary: #0077ac !default;
+$brand-grey-ultralight: #f5f5f5 !default;
+$brand-grey-light: #e8e8e8 !default;
+$brand-grey: #cccccc !default;
+$brand-grey-dark: #777 !default;
+$brand-navbar-item-color: #fff !default;
+
+// brand logo image and header background
+$brand-logo: url('/Images/logo-workstreamx.svg') !default;
+$brand-logo-login: url('/Images/logo-workstreamx.png') !default;
+$brand-header-background: $brand-primary;
+$brand-cta-background: linear-gradient(135deg, $brand-primary 50%,$brand-primary-dark 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+// brand logo login page styles
+$brand-logo-width-login-mobile: 120px !default;
+$brand-logo-vertical-space-login-mobile: 10px !default;
+$brand-logo-height-login-desktop: 60px !default;
+// brand app header/navbar logo styles
+$brand-logo-width-navbar: 150px !default;
+$brand-logo-height-navbar: auto !default;
+$brand-logo-vertical-space-navbar: 5px !default;
+//
+$brand-product-title: none !default;
+
+// brand fonts and font styles
+$brand-font-primary: Lato, Segoe UI, Arial !default;
+$brand-font-primary-bold: Lato Bold, Segoe UI, Arial !default;
+$brand-type-min: 0.6em !default;
+$brand-type-xxsmall: 0.8em !default;
+$brand-type-xsmall: 0.9em !default;
+$brand-type-small: 1em !default;
+$brand-type-base: 1.1em !default;
+$brand-type-large: 1.25em !default;
+$brand-type-xlarge: 1.5em !default;
+$brand-type-xxlarge: 1.75em !default;
+$brand-type-xxxlarge: 1em !default;
+$brand-type-max: 2.5em !default;
+
+// margins, spacing and padding
+$brand-space-xsmall: 5px !default;
+$brand-space-small: 5px !default;
+$brand-space-medium: 5px !default;
+$brand-space-base: 20px !default;
+$brand-right-align:2px !default;
+$brand-space-med-large: 30px !default;
+$brand-space-large: 50px !default; //Checkout step small
+
+
+$brand-space-large: 40px !default;
+$brand-space-xlarge: 50px !default;
+$brand-space-xxlarge: 100px !default;
+
+// border-radius
+$brand-button-radius: 50px !default;
+$brand-border-radius: 3px !default;
+
+// breakpoints
+$screen-sm-min: 678px !default;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px !default;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px !default;
+$screen-md-max: ($screen-lg-min - 1);
+
+// set inner element and outer wrapper min and max widths
+$screen-inner-min-width: 260px !default;
+$screen-wrapper-min-width: 290px !default;
+
+// mixin vars
+$maxWidth: 1280 !default;
+$regularSize: 12px !default;
+$helvetica: Helvetica, Arial, sans-serif !default;
+$grid-columns: 12 !default;
+
+//NEW
+$brand-horizontal-link-color-navbar:#FFFFFF;
+

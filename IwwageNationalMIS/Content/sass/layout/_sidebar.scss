@@ -1,0 +1,10 @@
+.sidebar {
+    padding: 0 $brand-space-base;
+
+    form {
+        background: white;
+        padding: $brand-space-medium;
+        overflow: hidden;
+        border-radius: $brand-border-radius;
+    }
+}
